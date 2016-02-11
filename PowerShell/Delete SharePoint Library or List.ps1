@@ -7,7 +7,9 @@
 if ((Get-PSSnapin "Microsoft.SharePoint.PowerShell" -ErrorAction SilentlyContinue) -eq $null) {
 	Add-PSSnapin "Microsoft.SharePoint.PowerShell"
 }
-$spWeb = Get-SPWeb -identity "http://site"  
-$list = $spWeb.Lists["Request Library"]
+$spWeb = Get-SPWeb -identity "http://smsk01we32u"  
+$list = $spWeb.Lists["ssef"]
 $list.AllowDeletion = $True
 $list.Update()
+
+# $list.Delete()

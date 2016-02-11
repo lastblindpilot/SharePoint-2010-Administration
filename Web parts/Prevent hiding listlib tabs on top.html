@@ -1,0 +1,23 @@
+<!--
+## HTML Form web part for SharePoint 2010 
+## Prevent hiding list/lib tabs on top 
+-->
+
+<style type="text/css">
+
+.s4-wpTopTable
+{
+border: none !important;
+}
+
+</style>
+<script type="text/javascript">
+    ExecuteOrDelayUntilScriptLoaded(init_defaultWP, "sp.js");
+
+    function init_defaultWP() {
+        setTimeout(function () {
+            var defaultWP = document.getElementById("MSOZoneCell_WebPartWPQ2");
+            WpClick({ target: defaultWP, srcElement: defaultWP });
+        }, 100);
+    }
+</script>
